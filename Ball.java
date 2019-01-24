@@ -87,5 +87,5 @@ public class Ball extends Actor
             }
             brick.effect();
         }
-    }
+}
 }

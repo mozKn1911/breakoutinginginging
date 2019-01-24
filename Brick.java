@@ -39,13 +39,6 @@ public class Brick  extends Actor
                     cnt++;
                 }
       }
-    public void thend()
-    {
-        if(cnt==15){
-            thend++;
-        }
-    }
-
     public boolean checkHit()
     {
         Actor a = getOneIntersectingObject(null);
@@ -58,11 +51,4 @@ public class Brick  extends Actor
             return false;
         }
     }
-    
-    //static int trans()
-    //{
-    
-        //return thend;
-    
-    //}
 }
