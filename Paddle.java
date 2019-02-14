@@ -13,6 +13,7 @@ public class Paddle extends Actor
     public Ball ballFoo;
     private MouseInfo minfo;
     private int xD;
+    private int on;
     
 
     /**
@@ -30,6 +31,20 @@ public class Paddle extends Actor
         }
         if( Greenfoot.isKeyDown( "right" ) ){
             move( 10 );   
+        }
+        if( Greenfoot.isKeyDown( "space" ) ){
+            on++;   
+        }
+        if(on>=1){
+        if( Greenfoot.isKeyDown( "left" ) ){
+            move(-20);
+        }
+        if( Greenfoot.isKeyDown( "right" ) ){
+            move( 20 );   
+        } 
+        if( Greenfoot.isKeyDown( "space" ) ){
+            on=0;   
+        }
         }
         if( haveBall() && Greenfoot.isKeyDown( "space" ) || Greenfoot.mouseClicked(null) ){
             releaseBall();   

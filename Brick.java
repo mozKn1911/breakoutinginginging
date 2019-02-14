@@ -8,8 +8,6 @@ public class Brick  extends Actor
     private  GreenfootImage brick3 = new GreenfootImage("Brick3.png");
     private int thend = 0;
     private int hit = 0;
-    private int cnt =0;
-
     /*public void act()
     {
     
@@ -34,11 +32,10 @@ public class Brick  extends Actor
     {
         if (hit >= 1)
                 {
-                    hit--;
+                    //hit--;
                     getWorld().removeObject(this);
-                    cnt++;
                 }
-      }
+    }
     public boolean checkHit()
     {
         Actor a = getOneIntersectingObject(null);

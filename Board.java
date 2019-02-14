@@ -60,6 +60,7 @@ public class Board extends World
     public void act()
     {
         checkLives();
+        checkClear();
     }
     
     private void checkLives()
@@ -76,7 +77,17 @@ public class Board extends World
         { 
             removeObject(live);
             addObject( new gameover(), 625, 450); 
+            Ball.cnt=0;
             Greenfoot.stop();
         }   
+    } 
+    private void checkClear()
+    {
+        if (Ball.cnt==75) 
+        {
+            Ball.cnt=0;
+            addObject( new gameclear(), 625, 450);
+            Greenfoot.stop();
+        }
     } 
 }

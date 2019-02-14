@@ -7,7 +7,7 @@ public class Ball extends Actor
     private int deltaY;         
     private int count = 2;
     private Brick brick;
-
+    public static int cnt =0;
     private boolean stuck = true;   
 
     public void act() 
@@ -86,6 +86,8 @@ public class Ball extends Actor
                 deltaX = -deltaX;
             }
             brick.effect();
+            cnt++;
+            //System.out.println(cnt); 
         }
 }
 }
